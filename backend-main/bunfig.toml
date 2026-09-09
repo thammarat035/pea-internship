@@ -1,0 +1,11 @@
+[test]
+# เปิดใช้ coverage report เวลารัน `bun test --coverage`
+coverage = true
+
+# ไม่ต้องนับ coverage ของไฟล์ config/schema/ไฟล์ที่ไม่มี logic ให้เทส
+coveragePathIgnorePatterns = [
+  "node_modules",
+  "src/db/schema.ts",
+  "src/db/relations.ts",
+  "src/config",
+]
